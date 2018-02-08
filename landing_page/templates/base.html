@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{{ url_for('static',filename='style.css') }}" type="text/css" rel="stylesheet">
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('index')}}">Index</a></li>
+        <li><a href="{{ url_for('ninjas')}}">Ninjas</a></li>
+        <li><a href="{{ url_for('dojos')}}">Dojos</a></li>
+      </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

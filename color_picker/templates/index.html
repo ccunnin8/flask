@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" style="{{ bg }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description"  content="submit form watch background change">
+    <title>Color Picker</title>
+    <link href="{{ url_for('static',filename='style.css') }}"  type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    </style>
+    <div class="wrapper">
+      <h1>Enter your color values below:</h1>
+      <form method="POST" action="/">
+        <div>
+          <label for="red">Red: </label>
+          <input type="text" id="red" name="red">
+        </div>
+        <div>
+          <label for="green">Green: </label>
+          <input type="text" id="green" name="green">
+        </div>
+        <div>
+          <label for="blue">Blue: </label>
+          <input type="blue" id="blue" name="blue">
+        </div>
+        <p> * All Values must be between 1 and 255 </p>
+        <input type="submit" value="Show my color!">
+      </form>
+    </div>
+  </body>
+</html>

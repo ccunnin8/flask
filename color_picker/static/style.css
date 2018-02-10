@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+}
+form {
+  width: 300px;
+  margin: 0 auto;
+}
+form div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 200px;
+}

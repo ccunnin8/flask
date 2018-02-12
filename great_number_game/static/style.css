@@ -1,0 +1,27 @@
+body {
+  text-align: center;
+}
+.wrapper {
+  width: 400px;
+  margin: 20px auto;
+}
+.greater, .lower, .equals{
+  height: 400px;
+  width: 400px;
+  margin: 0 auto 20px auto;
+  /* line-height: 400px; */
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+  border: 1px solid black;
+}
+
+.greater {
+  background-color: blue;
+}
+.lower {
+  background-color: red;
+}
+.equals {
+  background-color: green;
+}

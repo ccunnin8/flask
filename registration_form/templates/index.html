@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <script src="{{ url_for('static',filename='script.js') }}"></script>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <form action="/" method="POST">
+      {% with messages = get_flashed_messages(category_filter=["name","email"]) %}
+        {% if messages %}
+          {% for message in messages %}
+            <p>{{ message }}
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <div>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required>
+      </div> 
+      <div>
+        <label for="first_name">First Name: </label>
+        <input type="text" name="first_name" id="first_name" required>
+      </div>
+      <div>
+        <label for="apellido">Last Name: </label>
+        <input type="text" name="apellido" id="apellido" required>
+      </div>
+      {% with messages = get_flashed_messages(category_filter=["password"]) %}
+        {% if messages %}
+          {% for message in messages %}
+            <p>{{ message }}
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <div>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" required>
+      </div>
+      <div>
+        <label for="confirm_password">Confirm Password: </label>
+        <input type="password" name="confirm_password" id="password" required>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
